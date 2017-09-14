@@ -8,35 +8,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="" />
+        android:text="gongzi" />
 
     <TextView
         android:id="@+id/outmoney"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text=""
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:textAlignment="center"/>
+        android:text="$400"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/outdate"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text=""
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:textAlignment="center"/>
+        android:text="2017-11-12"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/outaddress"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text=""
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:textAlignment="center"/>
+        android:text="caiwu"
+        android:textSize="24sp" />
 </LinearLayout>
