@@ -12,6 +12,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import chen.com.myaccount.adapter.ComeOutadapter;
+import chen.com.myaccount.adapter.ListViewAdpter;
 import chen.com.myaccount.bean.Outaccount;
 import chen.com.myaccount.util.GreenDaoUtil;
 import greendao.gen.DaoSession;
@@ -24,12 +25,13 @@ public class OutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_out);
+        listView=(ListView)findViewById(R.id.newoutcome);
+        listView.invalidate();
         GreenDaoUtil util=new GreenDaoUtil(this,"account");
         session=util.getSession();
       //  session.getOutaccountDao().insert(new Outaccount(100,"2017-11-21","工资","昆明","发放工资的"));
         List<Outaccount> list=session.getOutaccountDao().queryBuilder().list();
-        final ComeOutadapter outadapter=new ComeOutadapter(this,list);
-        listView=(ListView)findViewById(R.id.newoutcome);
+        final ListViewAdpter outadapter=new ListViewAdpter(list,this);
         listView.setAdapter(outadapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -40,5 +42,6 @@ public class OutActivity extends AppCompatActivity {
 
             }
         });
+
     }
 }

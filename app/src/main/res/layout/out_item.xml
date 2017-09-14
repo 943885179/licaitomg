@@ -26,12 +26,14 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="2017-09-13"/>
-    <ImageButton
+    <Button
         android:id="@+id/delbtn"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#fff"
-        android:focusable="false"
-        android:src="@android:drawable/ic_delete"/>
+        android:background="#FF0000"
+        android:text="删除"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:focusable="false"/>
 </LinearLayout>
