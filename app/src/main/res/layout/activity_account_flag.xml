@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/itemflag"
+    android:orientation="vertical"
+
+    android:background="@color/bg"
+    android:weightSum="1">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/etFlag"
+            android:inputType="textMultiLine"
+            android:layout_weight="1"
+            android:minLines="1"
+            android:gravity="left|top"
+            android:hint="请输入添加标签的内容"
+            />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:id="@+id/btnOkFlag"
+        android:layout_weight="4"
+        android:textSize="18dp"
+        android:text="添加标签">
+
+    </Button>
+</LinearLayout>

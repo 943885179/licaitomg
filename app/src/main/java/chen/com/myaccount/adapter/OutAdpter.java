@@ -23,12 +23,14 @@ import java.util.List;
 
 import chen.com.myaccount.R;
 import chen.com.myaccount.bean.Outaccount;
+import chen.com.myaccount.util.GreenDaoUtil;
+import greendao.gen.DaoSession;
 
 /**
  * Created by ios13 on 17/9/14.
  */
 
-public class ListViewAdpter extends BaseAdapter {
+public class OutAdpter extends BaseAdapter {
     public List<Outaccount> data; //数据源
     private Context context;
     private float downX;  //点下时候获取的x坐标
@@ -36,8 +38,11 @@ public class ListViewAdpter extends BaseAdapter {
     private Button button; //用于执行删除的button
     private Animation animation;  //删除时候的动画
     private View view;
+    private DaoSession session;
 
-    public ListViewAdpter(List<Outaccount> data, Context context) {
+    public OutAdpter(List<Outaccount> data, Context context) {
+        GreenDaoUtil util = new GreenDaoUtil(context, "account");
+        this.session = util.session;
         this.data = data;
         this.context = context;
         animation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out);  //用xml获取一个动画
@@ -115,6 +120,7 @@ public class ListViewAdpter extends BaseAdapter {
                     new AlertDialog.Builder(context).setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
+                            session.getOutaccountDao().delete(outaccount);
                             button.setVisibility(View.GONE);  //点击删除按钮后，影藏按钮
                             deleteItem(view, position);   //删除数据，加动画
                         }

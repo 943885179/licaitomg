@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/bg"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/pwdedit"
+        android:layout_marginTop="60sp"
+        android:hint="请输入新密码"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/pwdbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改密码"/>
+    <Button
+        android:id="@+id/esc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出登陆"/>
+</LinearLayout>

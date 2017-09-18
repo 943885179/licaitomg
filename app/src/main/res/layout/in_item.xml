@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70sp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textSize="30sp"
+        android:gravity="bottom|center_horizontal"
+        android:text="工资" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="#521"
+        android:textSize="30sp"
+        android:gravity="bottom|center_horizontal"
+        android:text="$200"/>
+    <TextView
+        android:id="@+id/times"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="bottom|center_horizontal"
+        android:text="2017-09-13"/>
+    <Button
+        android:id="@+id/delbtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#FF0000"
+        android:text="删除"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:focusable="false"/>
+</LinearLayout>
